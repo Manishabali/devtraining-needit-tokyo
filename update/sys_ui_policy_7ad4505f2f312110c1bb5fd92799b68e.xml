@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
     <sys_ui_policy action="INSERT_OR_UPDATE">
         <active>true</active>
-        <conditions table="x_58872_needit_needit">u_what_needed=legal1^EQ<item display_value="Legal 1" endquery="false" field="u_what_needed" goto="false" newquery="false" operator="=" or="false" value="legal1"/>
+        <conditions table="x_58872_needit_needit">state=13^EQ<item display_value="Requested" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="13"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </conditions>
         <description/>
@@ -13,35 +13,32 @@
         <on_load>true</on_load>
         <order>100</order>
         <reverse_if_false>true</reverse_if_false>
-        <run_scripts>true</run_scripts>
+        <run_scripts>false</run_scripts>
         <script_false><![CDATA[function onCondition() {
-	g_form.hideFieldMsg('u_other',true);
 
 }]]></script_false>
         <script_true><![CDATA[function onCondition() {
-    // Display a message under the Other field to explain what to put in the
-    // Other field.
-    g_form.showFieldMsg('u_other','Briefly explain what you need. I used Legal1 instead of other','info');
-   }]]></script_true>
+
+}]]></script_true>
         <set_values/>
-        <short_description>NeedIt show or hide Other field</short_description>
+        <short_description>Make fields read-only on close</short_description>
         <sys_class_name>sys_ui_policy</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-03-21 20:38:17</sys_created_on>
+        <sys_created_on>2023-03-30 15:50:42</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>f1ef3a982f752110c1bb5fd92799b61c</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>NeedIt show or hide Other field</sys_name>
+        <sys_id>7ad4505f2f312110c1bb5fd92799b68e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Make fields read-only on close</sys_name>
         <sys_overrides/>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
-        <sys_update_name>sys_ui_policy_f1ef3a982f752110c1bb5fd92799b61c</sys_update_name>
+        <sys_update_name>sys_ui_policy_7ad4505f2f312110c1bb5fd92799b68e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-03-30 16:23:19</sys_updated_on>
+        <sys_updated_on>2023-03-30 15:50:42</sys_updated_on>
         <table>x_58872_needit_needit</table>
-        <ui_type>10</ui_type>
+        <ui_type>0</ui_type>
         <view/>
     </sys_ui_policy>
 </record_update>
